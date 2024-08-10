@@ -1,0 +1,22 @@
+/* styles.css */
+
+h1 {
+    color: blue;
+    font: size 40px; ;
+}
+
+.header {
+    text-decoration: underline;
+    text-align: center;
+}
+
+li {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: yellow;
+}
+
+img {
+    height: 300px;
+    width: auto;
+}
