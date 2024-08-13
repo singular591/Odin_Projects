@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+
+    <script>
+// exercise 1 :
+// let a = 1;
+// let b = 1;
+
+// let c = ++a; 
+// let d = b++;
+
+// Question 1 : a = 2, b = 2, c = 2, d = 1
+// because ++ used in prefix form returns the result after the operation while
+// ++ used in post form (as in $variable++) returns the previous number if used right away
+// thus
+// ++a means c = 1+1 so c = 2 and a get incremented so a = 2
+// b++ means b = 2 but because ++ is lower priority the = get done first
+// so d = b at the time, so d = 1 THEN b gets incremented so b = 2
+// so a = 2, b = 2, c = 2 and d = 1
+
+//ex 2
+// "" + 1 + 0 = "10"
+// we add up the last part > (1+0) then "" means 0 so 1+0+0=1. No, we do "" (so, 0) + 1 then + 0. So 0+1+0=1. Correction : "" is a string. So the entire thing becomes a string first. So (nothing)then "1" then "0". (nothing)10 > "10" (string). The
+// The Confusion  came from alert( +"" );   which convert non number, here, an empty string to a number, here, empty means 0. In this exercise "" IS NOT +""
+// 
+// "" - 1 + 0 = -1 
+// Why : + is the only operator that concatenates. Other operators concert strings to numbers. So here "" means 0, so 0-1-0 = -1
+// 
+// true + false = 1 but I can't find why. Maybe true = 1 and false = 0. Seems to be the case while testing.
+// 
+// 6 / "3" = 2. "3" gets converted to integer thus 6/3=2
+// "2" * "3" = 6. Both values get converted to numbers so 2*3=6
+// 4 + 5 + "px" = "9px"
+// "$" + 4 + 5 =  "$45"
+// "4" - 2 = 2 
+// "4px" - 2 = NaN You can't substract a string and an number
+// "  -9  " + 5 = -14 String gets converted to number
+// "  -9  " - 5 = NaN
+// null + 1 = 1 Null becomes 0 after numeric conversion
+// undefined + 1 = NaN undefined becomes NaN after numeric conversion
+// " \t \n" - 2 = -2 Dont get it but here's the explanation Space characters are trimmed off string start and end when a string is converted to a number. Here the whole string consists of space characters, such as \t, \n and a “regular” space between them. So, similarly to an empty string, it becomes 0.
+// Maybe "\whatever" is consider like a space character so like nothing. so "\t" and "\n" equal 0 and the remaining real space too so 0+0+0-2=-2
+
+let a = Number(prompt("First number?", 1));
+let b = Number(prompt("Second number?", 2));
+
+
+
+alert(a + b); // 12
+
+    </script>
+    
+</body>
+</html>
